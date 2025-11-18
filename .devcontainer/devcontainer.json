@@ -1,0 +1,39 @@
+{
+    "name": "pwnbox",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "postCreateCommand": "/tmp/post.sh",
+
+    "workspaceMount": "source=${localWorkspaceFolder}/workdir,target=/home/vscode/pwnbox,type=bind",
+    "workspaceFolder": "/home/vscode/pwnbox",
+    
+    // "features": {
+    // }
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-vscode.cpptools"
+            ]
+        },
+
+        "settings": {
+            "python.terminal.activateEnvironment": true,
+            "python.defaultInterpreterPath": "/home/vscode/pwnbox/.venv/bin/python",
+            "terminal.integrated.env.linux": {
+                "VIRTUAL_ENV": "/home/vscode/pwnbox/.venv",
+                "PATH": "/home/vscode/pwnbox/.venv/bin:${env:PATH}"
+            }
+        }
+    },
+
+    "remoteUser": "vscode" // ,
+
+    // "runArgs": [
+    //     "-e", "XDG_RUNTIME_DIR=/tmp",
+    //     "-e", "WAYLAND_DISPLAY=wayland-0",
+    //     "-v", "/tmp/wayland-0:/tmp/wayland-0" // usa poi xhost +local:docker per il suo corretto funzionamento
+    // ]
+}

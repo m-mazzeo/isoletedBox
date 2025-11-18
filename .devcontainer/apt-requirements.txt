@@ -1,0 +1,12 @@
+ht
+ltrace
+gdb
+curl
+python3
+patchelf
+elfutils
+file
+libssl-dev
+pkg-config
+liblzma-dev
+qemu-user-static
