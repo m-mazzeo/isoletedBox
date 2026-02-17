@@ -1,6 +1,9 @@
 ht
 ltrace
 gdb
+gdbserver
+libc6-dbg
+binutils
 curl
 python3
 patchelf

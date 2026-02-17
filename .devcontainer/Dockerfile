@@ -7,6 +7,7 @@ RUN mkdir $HOME/pwnbox
 
 COPY apt-requirements.txt /tmp/apt-requirements.txt
 
+# TODO: add a makefile to installation and confugure of: software sec tools, misc tools and library used
 RUN apt update && apt install -y \
     $(xargs < /tmp/apt-requirements.txt) && rm /tmp/apt-requirements.txt
 
