@@ -4,3 +4,5 @@ __pycache__/
 .devcontainer/tools
 !.devcontainer/tools/bin
 workdir/
+archive
+aechive/*
