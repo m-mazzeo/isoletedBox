@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Install GEF
+# RUN curl -qsL 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb
+bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
+
 [ ! -d "$HOME/pwnbox" ] && mkdir -p $HOME/pwnbox/
 if [ -d "$HOME/pwnbox/.venv" ]; then
     exit 0

@@ -11,9 +11,8 @@ COPY apt-requirements.txt /tmp/apt-requirements.txt
 RUN apt update && apt install -y \
     $(xargs < /tmp/apt-requirements.txt) && rm /tmp/apt-requirements.txt
 
-# Install GEF
-# RUN curl -qsL 'https://install.pwndbg.re' | sh -s -- -t pwndbg-gdb
-RUN bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
+# fix libc broblems
+RUN ln -s /usr/i686-linux-gnu/lib/libc.so.6 /usr/lib/i386-linux-gnu/
 
 # Install uv
 COPY pip-requirements.txt /tmp/pip-requirements.txt

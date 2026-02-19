@@ -13,3 +13,4 @@ libssl-dev
 pkg-config
 liblzma-dev
 qemu-user-static
+libc6-i386-cross
